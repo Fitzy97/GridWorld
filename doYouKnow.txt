@@ -1,0 +1,41 @@
+Sean Fitzgerald
+https://github.com/Fitzy97/GridWorld
+APCS2 pd08
+HW33
+2014-04-29
+
+Do You Know?
+Set 3
+1.  Call loc1.getRow()
+2.  b has the value of false.
+3.  loc3 has the value of a Location with row 5 and column 3.
+4.  dir has the value of 135.
+5.  getAdjacentLocation takes a parameter that indicates which direction the adjacent location is.
+
+Set 4
+1.  Call getOccupiedLocations().size()
+2.  Call getNumRows()*getNumCols()-getOccupiesLocations().size()
+3.  Grid’s method declarations do not have code because they are part of an interface, to be implemented by classes that implement the Grid interface.
+4.  It is better to use ArrayList here because it has a built-in toString, which will allow one to easily see all the elements in the ArrayList.
+
+Set 5
+1.  Each actor has a color, a direction, a grid, and a location.
+2.  When an actor is constructed, it is blue and faces north.
+3.  Actor was created as a class instead of an interface so that every Actor has default properties, such as direction, that do not change from subclass to subclass.
+4.  An Actor cannot put itself into a grid twice without removing first.  It cannot remove itself if it is not in a grid.  An Actor can be placed into a grid, remove itself, then put itself back.
+5.  Call setDirection( getDirection() + 90 )
+
+Set 6
+1.  if (!gr.isValid(next))
+	return false;
+2.  return (neighbor == null) || (neighbor instanceof Flower);
+3.  canMove() invokes Grid.get(Location loc) to find the Actor in the neighboring location.  It also invokes Grid.isValid(Location loc) to see whether the neighboring Location is on the grid or not.
+4.  canMove() invokes getAdjacentLocation from the Location class to find the neighboring location of the Bug.
+5.  canMove() invokes getGrid() from the Actor class to find the grid that the Bug is currently in, whether it is in a grid, and later to look at the upcoming Location and Actor in the grid.  It also invokes getLocation() to find the current location of the Bug and to look at the adjacent Location.
+6.  If the upcoming Location is off the grid, the Bug removes itself from the Grid.
+7.  The loc variable is necessary to hold the Bug’s previous location, so if it moves on a Flower can be placed in loc.
+8.  The Flowers have the same color as the Bug because if multiple Bugs were dropping Flowers we could tell which were who’s.
+9.  When a bug removes itself from a Grid, it will indeed place a flower in its old spot.
+10.  Flower flower = new Flower(getColor());
+       flower.putSelfInGrid( gr, loc );
+11.  The Bug should call turn() 4 times to move 180 degrees.
