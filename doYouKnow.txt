@@ -39,3 +39,18 @@ Set 6
 10.  Flower flower = new Flower(getColor());
        flower.putSelfInGrid( gr, loc );
 11.  The Bug should call turn() 4 times to move 180 degrees.
+
+Group Activity
+1. a) Turn 45 degrees to the right.
+   b) Turn 45 degrees to the right.
+   c) Turn 45 degrees to the right.
+   d) Turn 45 degrees to the right.
+   e) Turn 45 degrees to the right.
+   f) no
+
+2. a) Jumper extends Actor.
+   b) Bug is similar to Jumper.
+   c) The Jumper's parameters should have the color and direction.
+   d) act() and turn() should be overidden.
+   e) jump(), canJump() and the constructors should be added.
+   f) Test it by putting in a grid and having it act.
